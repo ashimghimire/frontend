@@ -1,0 +1,19 @@
+<div class="container">
+   
+    <app-loading *ngIf="loaded==false"></app-loading>
+    <ng-template [ngIf]="loaded==true">
+    <div class="card p-5 mt-5">
+       <h2>Order Number</h2> <b> {{amount.bookingId}}</b>
+        <div>
+            Name: {{user.name}} <br/>
+            From : {{bookings.from}}  <br/>
+            To: {{bookings.to}} <br/>
+            Cabin: {{bookings.cabin}}<br/>
+            Passenger:{{bookings.passenger}}<br/>
+        </div>
+       
+    </div>
+    <button class="btn btn-success mt-5 pull-right" (click)="addPayment()">Pay</button>
+</ng-template>
+
+</div>
